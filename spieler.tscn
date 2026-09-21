@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://fhev3p36u1ib"]
+
+[ext_resource type="Script" uid="uid://b1v8whqs4l11l" path="res://player_sixxer.gd" id="1_0xcs4"]
+[ext_resource type="Texture2D" uid="uid://hjnrwomie1tm" path="res://icon.svg" id="2_4ifl7"]
+[ext_resource type="Script" uid="uid://cn4x8pqt7jv2w" path="res://joint_visual.gd" id="3_joint1"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e5213"]
+
+[node name="Player - Sixxer" type="CharacterBody2D" unique_id=1414725468 groups=["spieler"]]
+z_index = 1
+motion_mode = 1
+script = ExtResource("1_0xcs4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2098619268]
+shape = SubResource("CapsuleShape2D_e5213")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=111495237]
+process_callback = 0
+limit_left = 0
+limit_top = 0
+limit_right = 1280
+limit_bottom = 720
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1890985957]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_4ifl7")
+
+[node name="JointVisual" type="Node2D" parent="." unique_id=3000000010]
+script = ExtResource("3_joint1")

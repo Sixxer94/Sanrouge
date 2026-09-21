@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://herz_pickup_001"]
+
+[ext_resource type="Script" path="res://herz.gd" id="1_herz"]
+
+[node name="Herz" type="Area2D"]
+script = ExtResource("1_herz")

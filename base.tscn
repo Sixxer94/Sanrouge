@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://c1f5w8plr3t0e"]
+
+[ext_resource type="Script" uid="uid://bxd4v9nks2m0c" path="res://base.gd" id="1_base0"]
+[ext_resource type="PackedScene" uid="uid://fhev3p36u1ib" path="res://spieler.tscn" id="2_spl00"]
+
+[node name="Base" type="Node2D" unique_id=2000000001]
+script = ExtResource("1_base0")
+
+[node name="Spieler" parent="." instance=ExtResource("2_spl00") unique_id=2000000080]
+position = Vector2(640, 430)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2000000090]
+
+[node name="Hinweis" type="Label" parent="CanvasLayer" unique_id=2000000095]
+offset_left = 0.0
+offset_top = 660.0
+offset_right = 1280.0
+offset_bottom = 700.0
+horizontal_alignment = 1
+text = ""

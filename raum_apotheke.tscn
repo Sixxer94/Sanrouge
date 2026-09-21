@@ -1,0 +1,7 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" uid="uid://br6sfyvn5bk8u" path="res://raum.tscn" id="1"]
+[ext_resource type="Script" uid="uid://4tin52p4ymps" path="res://raum_apotheke.gd" id="2"]
+
+[node name="Raum" instance=ExtResource("1")]
+script = ExtResource("2")

@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://jamg6bqkbwd7"]
+
+[ext_resource type="Script" uid="uid://bjaeb3u6j6omc" path="res://charakterauswahl.gd" id="1_dsf76"]
+
+[node name="Charakterauswahl" type="Control" unique_id=1916254137]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dsf76")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1233269161]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -220.0
+offset_right = 200.0
+offset_bottom = 220.0
+alignment = 1
+
+[node name="LabelChar" type="Label" parent="VBoxContainer" unique_id=327081800]
+layout_mode = 2
+horizontal_alignment = 1
+text = "Wähle deinen Charakter"
+
+[node name="CharButtons" type="HBoxContainer" parent="VBoxContainer" unique_id=100000001]
+layout_mode = 2
+alignment = 1
+
+[node name="Sixxer" type="Button" parent="VBoxContainer/CharButtons" unique_id=2141008247]
+layout_mode = 2
+custom_minimum_size = Vector2(120, 45)
+text = "Sixxer"
+
+[node name="Zeti" type="Button" parent="VBoxContainer/CharButtons" unique_id=806976437]
+layout_mode = 2
+custom_minimum_size = Vector2(120, 45)
+text = "Zeti"
+
+[node name="Domi" type="Button" parent="VBoxContainer/CharButtons" unique_id=316172360]
+layout_mode = 2
+custom_minimum_size = Vector2(120, 45)
+text = "Domi"
+
+[node name="LabelRasse" type="Label" parent="VBoxContainer" unique_id=600000001]
+layout_mode = 2
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(1, 0.82, 0.1, 1)
+
+[node name="LabelFaehigkeit" type="Label" parent="VBoxContainer" unique_id=600000002]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="Spacer" type="Control" parent="VBoxContainer" unique_id=100000002]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 20)
+
+[node name="LabelForm" type="Label" parent="VBoxContainer" unique_id=500000001]
+layout_mode = 2
+horizontal_alignment = 1
+text = "Wähle deine Jointform"
+
+[node name="FormButtons" type="HBoxContainer" parent="VBoxContainer" unique_id=500000002]
+layout_mode = 2
+alignment = 1
+
+[node name="Normal" type="Button" parent="VBoxContainer/FormButtons" unique_id=500000003]
+layout_mode = 2
+custom_minimum_size = Vector2(120, 45)
+text = "Normal"
+
+[node name="Kreuz" type="Button" parent="VBoxContainer/FormButtons" unique_id=500000004]
+layout_mode = 2
+custom_minimum_size = Vector2(120, 45)
+text = "Kreuz"
+
+[node name="LForm" type="Button" parent="VBoxContainer/FormButtons" unique_id=500000005]
+layout_mode = 2
+custom_minimum_size = Vector2(120, 45)
+text = "L-Form"
+
+[node name="Spacer2" type="Control" parent="VBoxContainer" unique_id=100000003]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 20)
+
+[node name="Bestaetigen" type="Button" parent="VBoxContainer" unique_id=500000006]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 55)
+text = "Bestätigen"

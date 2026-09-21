@@ -1,0 +1,196 @@
+[gd_scene format=3 uid="uid://bossraum001a"]
+
+[ext_resource type="Script" uid="uid://dlebx5qo8ud45" path="res://raum.gd" id="1_uli7q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uli7q"]
+size = Vector2(560, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uebib"]
+size = Vector2(80, 280)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8pwu0"]
+size = Vector2(80, 280)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hro6a"]
+size = Vector2(560, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8mj5u"]
+size = Vector2(160, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gpvgc"]
+size = Vector2(80, 160)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8pmp7"]
+size = Vector2(80, 160)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5iaro"]
+size = Vector2(160, 80)
+
+[node name="RaumBoss" type="Node2D"]
+script = ExtResource("1_uli7q")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(1280, 720)
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.3, 0.04, 0.04, 1)
+
+[node name="Wand oben" type="StaticBody2D" parent="."]
+position = Vector2(640, 40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wand oben"]
+position = Vector2(-360, 0)
+shape = SubResource("RectangleShape2D_uli7q")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Wand oben"]
+position = Vector2(360, 0)
+shape = SubResource("RectangleShape2D_uli7q")
+
+[node name="ColorRect" type="ColorRect" parent="Wand oben"]
+custom_minimum_size = Vector2(1280, 80)
+offset_left = -640.0
+offset_top = -40.0
+offset_right = 640.0
+offset_bottom = 40.0
+color = Color(0.19434929, 0.19434926, 0.19434926, 1)
+
+[node name="Wand rechts" type="StaticBody2D" parent="."]
+position = Vector2(1240, 360)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wand rechts"]
+position = Vector2(0, 220)
+shape = SubResource("RectangleShape2D_uebib")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Wand rechts"]
+position = Vector2(0, -220)
+shape = SubResource("RectangleShape2D_uebib")
+
+[node name="ColorRect" type="ColorRect" parent="Wand rechts"]
+custom_minimum_size = Vector2(80, 720)
+offset_left = -40.0
+offset_top = -360.0
+offset_right = 40.0
+offset_bottom = 360.0
+color = Color(0.19434929, 0.19434926, 0.19434926, 1)
+
+[node name="Wand links" type="StaticBody2D" parent="."]
+position = Vector2(40, 360)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wand links"]
+position = Vector2(0, -220)
+shape = SubResource("RectangleShape2D_8pwu0")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Wand links"]
+position = Vector2(0, 220)
+shape = SubResource("RectangleShape2D_8pwu0")
+
+[node name="ColorRect" type="ColorRect" parent="Wand links"]
+custom_minimum_size = Vector2(80, 720)
+offset_left = -40.0
+offset_top = -360.0
+offset_right = 40.0
+offset_bottom = 360.0
+color = Color(0.19434929, 0.19434926, 0.19434926, 1)
+
+[node name="Wand unten" type="StaticBody2D" parent="."]
+position = Vector2(640, 680)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wand unten"]
+position = Vector2(-360, 0)
+shape = SubResource("RectangleShape2D_hro6a")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Wand unten"]
+position = Vector2(360, 0)
+shape = SubResource("RectangleShape2D_hro6a")
+
+[node name="ColorRect" type="ColorRect" parent="Wand unten"]
+custom_minimum_size = Vector2(1280, 80)
+offset_left = -640.0
+offset_top = -40.0
+offset_right = 640.0
+offset_bottom = 40.0
+color = Color(0.19434929, 0.19434926, 0.19434926, 1)
+
+[node name="Tuer_oben" type="ColorRect" parent="."]
+offset_left = 560.0
+offset_top = 0.0
+offset_right = 720.0
+offset_bottom = 80.0
+color = Color(0.14587978, 0.49514127, 0.5120735, 1)
+
+[node name="Tuer_links" type="ColorRect" parent="."]
+offset_left = 0.0
+offset_top = 280.0
+offset_right = 80.0
+offset_bottom = 440.0
+color = Color(0.14587978, 0.49514127, 0.5120735, 1)
+
+[node name="Tuer_rechts" type="ColorRect" parent="."]
+offset_left = 1200.0
+offset_top = 280.0
+offset_right = 1280.0
+offset_bottom = 440.0
+color = Color(0.14587978, 0.49514127, 0.5120735, 1)
+
+[node name="Tuer_unten" type="ColorRect" parent="."]
+offset_left = 560.0
+offset_top = 640.0
+offset_right = 720.0
+offset_bottom = 720.0
+color = Color(0.14587978, 0.49514127, 0.5120735, 1)
+
+[node name="Sperre_Oben" type="StaticBody2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sperre_Oben"]
+position = Vector2(640, 40)
+shape = SubResource("RectangleShape2D_8mj5u")
+disabled = true
+
+[node name="ColorRect" type="ColorRect" parent="Sperre_Oben/CollisionShape2D"]
+offset_left = -80.0
+offset_top = -40.0
+offset_right = 80.0
+offset_bottom = 40.0
+
+[node name="Sperre_Rechts" type="StaticBody2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sperre_Rechts"]
+position = Vector2(1240, 360)
+shape = SubResource("RectangleShape2D_gpvgc")
+disabled = true
+
+[node name="ColorRect" type="ColorRect" parent="Sperre_Rechts/CollisionShape2D"]
+offset_left = -40.0
+offset_top = -80.0
+offset_right = 40.0
+offset_bottom = 80.0
+
+[node name="Sperre_Links" type="StaticBody2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sperre_Links"]
+position = Vector2(40, 360)
+shape = SubResource("RectangleShape2D_8pmp7")
+disabled = true
+
+[node name="ColorRect" type="ColorRect" parent="Sperre_Links/CollisionShape2D"]
+offset_left = -40.0
+offset_top = -80.0
+offset_right = 40.0
+offset_bottom = 80.0
+
+[node name="Sperre_Unten" type="StaticBody2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sperre_Unten"]
+position = Vector2(640, 680)
+shape = SubResource("RectangleShape2D_5iaro")
+disabled = true
+
+[node name="ColorRect" type="ColorRect" parent="Sperre_Unten/CollisionShape2D"]
+offset_left = -80.0
+offset_top = -40.0
+offset_right = 80.0
+offset_bottom = 40.0

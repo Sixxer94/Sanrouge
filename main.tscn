@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://cdo1e8r5b7go3"]
+
+[ext_resource type="Script" uid="uid://cu3iatsgm0y3w" path="res://main.gd" id="1_7mycd"]
+[ext_resource type="PackedScene" uid="uid://fhev3p36u1ib" path="res://spieler.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://br6sfyvn5bk8u" path="res://raum.tscn" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://dk35f3sn1x8nk" path="res://hp_anzeige.gd" id="4_1bvp3"]
+[ext_resource type="Script" uid="uid://cv3ujogp675kt" path="res://mini_map.gd" id="6_272bh"]
+[ext_resource type="Script" uid="uid://cossc55dn5naq" path="res://boss_hp_bar.gd" id="10_bossb"]
+[ext_resource type="Script" uid="uid://dva3b8n1km5qe" path="res://verbrauchsanzeige.gd" id="11_vba1"]
+[ext_resource type="Script" uid="uid://bm7pq3n5x2r8k" path="res://crafting_menue.gd" id="12_craf1"]
+[ext_resource type="Script" uid="uid://dh6nwqr3qam5t" path="res://stats_anzeige.gd" id="13_stat1"]
+[ext_resource type="Script" uid="uid://cfj22mrny0884" path="res://welt_uebergang.gd" id="14_welt1"]
+
+[node name="Node2D" type="Node2D" unique_id=1205727577]
+script = ExtResource("1_7mycd")
+
+[node name="Player - Sixxer" parent="." unique_id=1414725468 instance=ExtResource("1_ig7tw")]
+z_index = 1
+position = Vector2(640, 360)
+
+[node name="Raum" parent="." unique_id=1655858328 instance=ExtResource("2_0xm2m")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=483716070]
+
+[node name="Lebensanzeige" type="HBoxContainer" parent="CanvasLayer" unique_id=728583248]
+offset_right = 10.0
+offset_bottom = 10.0
+scale = Vector2(0.3, 0.3)
+script = ExtResource("4_1bvp3")
+
+[node name="BossHPBar" type="Control" parent="CanvasLayer" unique_id=998877665]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("10_bossb")
+
+[node name="Verbrauchsanzeige" type="Control" parent="CanvasLayer" unique_id=-1194967295]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 5.0
+offset_top = 65.0
+offset_right = 160.0
+offset_bottom = 130.0
+script = ExtResource("11_vba1")
+
+[node name="StatsAnzeige" type="Control" parent="CanvasLayer" unique_id=-1194967294]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 5.0
+offset_top = 140.0
+offset_right = 175.0
+offset_bottom = 265.0
+script = ExtResource("13_stat1")
+
+[node name="CraftingMenue" type="Control" parent="CanvasLayer" unique_id=700000001]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("12_craf1")
+
+[node name="WeltUebergang" type="Control" parent="CanvasLayer" unique_id=900000001]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("14_welt1")
+
+[node name="MiniMap" type="Control" parent="CanvasLayer" unique_id=448066420]
+clip_contents = true
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -130.0
+offset_top = -130.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("6_272bh")

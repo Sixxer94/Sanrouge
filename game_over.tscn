@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://coi8rvvxbk0wq"]
+
+[ext_resource type="Script" uid="uid://b8eeyf2j13cho" path="res://game_over.gd" id="1_y26ei"]
+
+[node name="Game Over" type="Control" unique_id=1775683046]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y26ei")
+
+[node name="Label" type="Label" parent="." unique_id=716175882]
+layout_mode = 0
+offset_left = 335.0
+offset_top = 124.0
+offset_right = 422.0
+offset_bottom = 147.0
+text = "Game Over"
+
+[node name="Button" type="Button" parent="." unique_id=1978751313]
+layout_mode = 0
+offset_left = 328.0
+offset_top = 152.0
+offset_right = 430.0
+offset_bottom = 183.0
+text = "Neu Starten"
+
+[node name="Button2" type="Button" parent="." unique_id=1076467121]
+layout_mode = 0
+offset_left = 311.0
+offset_top = 194.0
+offset_right = 451.0
+offset_bottom = 225.0
+text = "Zum Hauptmenü"

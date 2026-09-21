@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bwykhnwocuc2t"]
+
+[ext_resource type="Script" uid="uid://b63qf33m61b0r" path="res://projektil.gd" id="1_ap5xq"]
+[ext_resource type="Texture2D" path="res://sprites/projektil.png" id="1_dyl3s"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ap5xq"]
+radius = 8.0
+
+[node name="Projektil" type="Area2D" unique_id=1457483175]
+script = ExtResource("1_ap5xq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=939127291]
+shape = SubResource("CircleShape2D_ap5xq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2031555760]
+texture = ExtResource("1_dyl3s")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

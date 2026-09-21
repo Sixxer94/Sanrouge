@@ -1,0 +1,131 @@
+[gd_scene format=3 uid="uid://gk34rrvkmsjc"]
+
+[ext_resource type="Script" uid="uid://dlebx5qo8ud45" path="res://raum.gd" id="1_l7p5x"]
+[ext_resource type="PackedScene" uid="uid://dgscodjqo01eg" path="res://relikte.tscn" id="2_f76jc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uli7q"]
+size = Vector2(300, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uebib"]
+size = Vector2(32, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8pwu0"]
+size = Vector2(32, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hro6a"]
+size = Vector2(300, 32)
+
+[node name="Raum2" type="Node2D" unique_id=1655858328]
+script = ExtResource("1_l7p5x")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=813328925]
+custom_minimum_size = Vector2(800, 600)
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.58431375, 0.6156863, 0.38039216, 1)
+
+[node name="Wand oben" type="StaticBody2D" parent="." unique_id=839933893]
+position = Vector2(400, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wand oben" unique_id=1815908505]
+position = Vector2(-250, 0)
+shape = SubResource("RectangleShape2D_uli7q")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Wand oben" unique_id=1025846987]
+position = Vector2(250, 0)
+shape = SubResource("RectangleShape2D_uli7q")
+
+[node name="ColorRect" type="ColorRect" parent="Wand oben" unique_id=1194824417]
+custom_minimum_size = Vector2(800, 32)
+offset_left = -400.0
+offset_top = -16.0
+offset_right = 400.0
+offset_bottom = 16.0
+color = Color(0.19434929, 0.19434926, 0.19434926, 1)
+
+[node name="Wand rechts" type="StaticBody2D" parent="." unique_id=946519452]
+position = Vector2(800, 300)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wand rechts" unique_id=1934431767]
+position = Vector2(0, 200)
+shape = SubResource("RectangleShape2D_uebib")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Wand rechts" unique_id=100352807]
+position = Vector2(0, -200)
+shape = SubResource("RectangleShape2D_uebib")
+
+[node name="ColorRect" type="ColorRect" parent="Wand rechts" unique_id=637069900]
+custom_minimum_size = Vector2(32, 32)
+offset_left = -16.0
+offset_top = -300.0
+offset_right = 16.0
+offset_bottom = 300.0
+color = Color(0.19434929, 0.19434926, 0.19434926, 1)
+
+[node name="Wand links" type="StaticBody2D" parent="." unique_id=1739339239]
+position = Vector2(0, 300)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wand links" unique_id=650557212]
+position = Vector2(0, -200)
+shape = SubResource("RectangleShape2D_8pwu0")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Wand links" unique_id=984204957]
+position = Vector2(0, 200)
+shape = SubResource("RectangleShape2D_8pwu0")
+
+[node name="ColorRect" type="ColorRect" parent="Wand links" unique_id=639687266]
+offset_left = -16.0
+offset_top = -300.0
+offset_right = 16.0
+offset_bottom = 300.0
+color = Color(0.19434929, 0.19434926, 0.19434926, 1)
+
+[node name="Wand unten" type="StaticBody2D" parent="." unique_id=811517027]
+position = Vector2(400, 600)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wand unten" unique_id=159187224]
+position = Vector2(-250, 0)
+shape = SubResource("RectangleShape2D_hro6a")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Wand unten" unique_id=1205175664]
+position = Vector2(250, 0)
+shape = SubResource("RectangleShape2D_hro6a")
+
+[node name="ColorRect" type="ColorRect" parent="Wand unten" unique_id=1325339829]
+custom_minimum_size = Vector2(800, 32)
+offset_left = -400.0
+offset_top = -16.0
+offset_right = 400.0
+offset_bottom = 16.0
+color = Color(0.19434929, 0.19434926, 0.19434926, 1)
+
+[node name="Tuer_oben" type="ColorRect" parent="." unique_id=480564153]
+offset_left = 300.0
+offset_top = -9.0
+offset_right = 500.0
+offset_bottom = 11.0
+color = Color(0.14587978, 0.49514127, 0.5120735, 1)
+
+[node name="Tuer_links" type="ColorRect" parent="." unique_id=590333037]
+offset_left = -9.0
+offset_top = 200.0
+offset_right = 11.0
+offset_bottom = 400.0
+color = Color(0.14587978, 0.49514127, 0.5120735, 1)
+
+[node name="Tuer_rechts" type="ColorRect" parent="." unique_id=541404489]
+offset_left = 789.0
+offset_top = 200.0
+offset_right = 809.0
+offset_bottom = 400.0
+color = Color(0.14587978, 0.49514127, 0.5120735, 1)
+
+[node name="Tuer_unten" type="ColorRect" parent="." unique_id=54318789]
+offset_left = 300.0
+offset_top = 589.0
+offset_right = 500.0
+offset_bottom = 609.0
+color = Color(0.14587978, 0.49514127, 0.5120735, 1)
+
+[node name="Relikte" parent="." unique_id=1314030118 instance=ExtResource("2_f76jc")]
+position = Vector2(644, 132)

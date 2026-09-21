@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://b7gegnergen01"]
+
+[ext_resource type="Script" path="res://gegner.gd" id="1_gegner"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gegner"]
+radius = 16.0
+
+[node name="Gegner" type="CharacterBody2D" groups=["gegner"]]
+script = ExtResource("1_gegner")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_gegner")

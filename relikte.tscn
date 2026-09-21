@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dgscodjqo01eg"]
+
+[ext_resource type="Script" uid="uid://cgwsl7nywg1to" path="res://relikte.gd" id="1_b1kxc"]
+[ext_resource type="Texture2D" uid="uid://hjnrwomie1tm" path="res://icon.svg" id="1_ksptu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kqexj"]
+radius = 16.0
+
+[node name="Relikte" type="Area2D" unique_id=1314030118]
+script = ExtResource("1_b1kxc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1809800502]
+shape = SubResource("CircleShape2D_kqexj")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1972942098]
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("1_ksptu")
